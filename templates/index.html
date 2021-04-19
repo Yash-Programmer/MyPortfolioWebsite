@@ -1,0 +1,241 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="yash varshney, yash, yash portfolio" />
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <link rel="stylesheet" href="{% static 'navbar.css' %}">
+    <link rel="stylesheet" href="{% static 'typewriter.css' %}">
+    <link rel="stylesheet" href="{% static 'w3.css' %}">
+    <link rel="stylesheet" href="{% static 'loader.css' %}">
+    <link href="{% static 'fontawesome_free/css/fontawesome.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'fontawesome_free/css/brands.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'fontawesome_free/css/solid.css' %}" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="{% static 'contact.css' %}">
+    <link rel="stylesheet" href="{% static 'chat.css' %}">
+    <link rel="icon" href="{% static 'Logo.png' %}">
+    <title>Portfolio</title>
+    <style>
+
+    </style>
+</head>
+
+<body onload="myFunction()">
+    <div id="loader"></div>
+    <div style="display:none;" id="myDiv" class="animate-bottom">
+        <div class="light split2" id="left">
+            <div class="small_light centered">
+                <a href="{% url 'index' %}"><i class="fas fa-home" style="font-size: 400%; color: white; margin: 20px 0px"></i></a>
+                <hr style="margin-top: 0px;">
+                <a target="_blank" href="https://github.com/Yash-Varshney-Creativities/"><i class="fab fa-github" style="font-size: 40px; color: white; padding: 10% 0%;"></i></a><br>
+                <a target="_blank" href="https://www.reddit.com/user/Yash_Varshney"><i class="fab fa-reddit" style="font-size: 40px; color: white;"></i></a><br>
+                <a target="_blank" href="https://t.me/YashVarshneyPro"><i class="fab fa-telegram" style="padding-top: 8%;font-size: 40px; color: white;"></i></a><br>
+                <a target="_blank" href="https://www.linkedin.com/in/yash-varshney-71a0111b6/"><i class="fab fa-linkedin" style="font-size: 40px; color: white; padding-top: 8%;"></i></a>
+
+            </div>
+        </div>
+
+        <div class="light split" id="right">
+            <div class="centered">
+                <header>
+                    <button class="tablink" onclick="openPage('Home', this, '#007580');" id="defaultOpen"><i class="fab fa-html5"></i><br>index.html</button>
+                    <button class="tablink" onclick="openPage('Intro', this, '#007580');"><i class="fab fa-github"></i><br>Intro.md</button>
+                    <button class="tablink" onclick="openPage('skills', this, '#007580');"><i class="fab fa-css3-alt"></i><br>Skills.css</button>
+                    <button class="tablink" onclick="openPage('projects', this, '#007580');"><i class="fab fa-js-square"></i><br>Projects.js</button>
+                    <button class="tablink" onclick="openPage('onlinegames', this, '#007580');"><i class="fas fa-sticky-note"></i><br>Follow.json</button>
+                    <button class="tablink" onclick="openPage('chat', this, '#007580');"><i class="fas fa-database"></i><br>Chat.db</button>
+                    <button class="tablink" onclick="openPage('github', this, '#007580');"><i class="fas fa-file-pdf"></i><br>Github.pdf</button>
+                    <button class="tablink" onclick="openPage('connect', this, '#007580');"><i class="fab fa-python"></i><br>Contact.py</button>
+                </header>
+                <div id="Home" class="tabcontent">
+                    <div class="typewriter_container">
+                        <p id="texttt" style="color: white;">Hi, I'm Yash<br><span id="typed" class="typed-text"></span><span class="cursor">&nbsp;</span></p>
+                    </div>
+                    <br>
+                    <button id="toggle-btn" onclick='changer()'><i class="fas fa-sun"></i> Light</button>
+                    <a href="/comment" target="_blank"><button id="toggle-btn"><i class="fas fa-comments"></i> Comments</button></a>
+                </div>
+                <div id="Intro" style="text-align: left;" class="tabcontent">
+                    <h2 class="shadow-on" style="padding: 2% 0;"><strong>My Introduction</strong></h2>
+                    <div class="w3-row">
+                        <div class="w3-col s3 w3-center">
+                            <img id="pic" src="{% static 'Pic.jpg' %}" alt="Pic">
+                        </div>
+                        <div class="w3-col s9" id="hidee">
+                            <p>Hi, My name is Yash. <br>I reside in India <br>I love to Code and play with technology <br>My favourite programming language is <b>Python</b> but I am interested in WebDev also. <br>I am a middle school student. <br>I am <strong>{{ days }} days</strong>                                old <br>I have supreme communication skills <br>I have good time and quick learning ability <br>I am a good team player to code/play. <br>Reach me at
+                                <a class="mail" href="mailto:yash.gurukul12@gmail.com">yash.gurukul12@gmail.com</a>.<br>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div id="skills" style="text-align: left;" class="tabcontent">
+                    <h2 class="shadow-on" style="padding: 2% 0%; text-align: left">Skills</h2>
+                    <br><br>
+                    <div class="Python">
+                        <a href="https://www.python.org/"><img draggable="false" alt="Py Logo" src="https://raw.githubusercontent.com/Yash-Varshney-Creativities/Yash-Varshney-Creativities/37e5afa037d39b792eb1ff846728ee8092a2384c/py.svg" style="width: 200px;"></a>
+                        <h1>The Python Programming Language</h1>
+                        <p>I started learning Python in The Lockdown Period during the COVID-19.<br>I started doing some basic stuff and found this programming language easy.<br>I found much interest in it and started.</p>
+                        <br><br><br>
+                        <div class="w3-light-grey w3-round-large">
+                            <div class="w3-container w3-blue w3-round-large" style="text-align: left; width:75%">Progress: 75%</div>
+                        </div>
+                        <hr>
+                    </div>
+                    <div class="tcl/tk python ">
+                        <a href="https://docs.python.org/3/library/tkinter.html "><img alt="tk Logo " draggable="false " src="https://github.com/Yash-Varshney-Creativities/Yash-Varshney-Creativities/blob/main/tk.png?raw=true " width="200 "></a>
+                        <h1>Tcl/Tk With Python
+                        </h1>
+                        <p>I know the Graphic User Interfaces Creating With tcl/Tk in Python.</p>
+                        <br><br>
+                        <div class="w3-light-grey w3-round-large">
+                            <div class="w3-container w3-blue w3-round-large" style="text-align: left; width:55%">Progress: 55%</div>
+                        </div>
+                        <hr>
+                    </div>
+                    <div class="django">
+                        <a href="https://www.djangoproject.com/"><img draggable="false" alt="django logo" src="https://github.com/Yash-Varshney-Creativities/Yash-Varshney-Creativities/blob/main/dj.png?raw=true" width="300"></a>
+                        <h1>Django</h1>
+                        <p>I learned Django and got much interest in it<br>This website is also created with <b>Django FrameWork</b></p>
+                        <br><br>
+                        <div class="w3-light-grey w3-round-large">
+                            <div class="w3-container w3-blue w3-round-large" style="text-align: left; width:40%">Progress: 40%</div>
+                        </div>
+                        <hr>
+                    </div>
+                    <div class="selen">
+                        <a href="https://www.selenium.dev/"><img draggable="false" alt="selenium logo" src="https://github.com/Yash-Varshney-Creativities/Yash-Varshney-Creativities/blob/main/selen.png?raw=true" width="200"></a>
+                        <h1>Selenium Automation With Python</h1>
+                        <p>My Father is an Automater and Automates the testcases in Java.<br>I got Much Help from him in Learning Selenium Webdrivers in Python.</p>
+                        <br><br>
+                        <div class="w3-light-grey w3-round-large">
+                            <div class="w3-container w3-blue w3-round-large" style="text-align: left; width:45%">Progress: 45%</div>
+                        </div>
+                        <hr>
+                    </div>
+                    <div>
+                        <a href="https://en.wikipedia.org/wiki/HTML"><img style="width: 15%" alt="HTML logo" draggable="false" src="https://github.com/Yash-Varshney-Creativities/Yash-Varshney-Creativities/blob/main/HTML-removebg-preview.png?raw=true"></a>
+                        <a href="https://en.wikipedia.org/wiki/CSS"><img style="width: 8.7%" alt="CSS logo" draggable="false" src="https://github.com/Yash-Varshney-Creativities/Yash-Varshney-Creativities/blob/main/image-removebg-preview.png?raw=true"></a>
+                        <h1>HTML and CSS</h1>
+                        <p>I am Learning in HTML and CSS.</p>
+                        <br>
+                        <div class="w3-light-grey w3-round-large">
+                            <div class="w3-container w3-blue w3-round-large" style="text-align: left; width:87.5%">Progress: 85.5%</div>
+                        </div>
+                        <hr>
+                    </div>
+                    <div>
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" alt="JS">
+                        <h1>Javascript</h1>
+                        <p>I love using JavaScript. I found it as a great language. I am still in learning progress.</p><br>
+                        <div class="w3-light-grey w3-round-large">
+                            <div class="w3-container w3-blue w3-round-large" style="text-align: left; width:30%">Progress: 30%</div>
+                        </div>
+                        <hr>
+                    </div>
+                    <div>
+                        <img src="https://1000logos.net/wp-content/uploads/2020/09/Java-Logo.png" alt="Java">
+                        <h1>Java</h1>
+                        <p>I started working in Java. I am learning the basics</p>
+                        <br>
+                        <div class="w3-light-grey w3-round-large">
+                            <div class="w3-container w3-blue w3-round-large" style="text-align: left; width:25%">Progress: 25%</div>
+                        </div>
+                        <hr>
+                    </div>
+                    <div>
+                        <img src="https://camo.githubusercontent.com/6eaaae8defc78f268eaf0824350a66a1dfcb6aa77210d3dca069d1d1cefebc53/68747470733a2f2f6769742d73636d2e636f6d2f696d616765732f6c6f676f732f646f776e6c6f6164732f4769742d4c6f676f2d32436f6c6f722e706e67" alt="git">
+                        <h1>Git and Github</h1>
+                        <p>I love to work with Git as the Version Control System.</p>
+                        <br>
+                        <div class="w3-light-grey w3-round-large">
+                            <div class="w3-container w3-blue w3-round-large" style="text-align: left; width:85%">Progress: 85%</div>
+                        </div>
+                        <hr>
+                    </div>
+                    </center>
+                    <br><br>
+                </div>
+                <div id="projects" class="tabcontent">
+                    <h2 style="text-align: left; padding: 2% 0%;" class='shadow-on'>Projects</h2>
+                    <a class="select" href="https://github.com/Yash-Varshney-Creativities/Numbers-to-Number-Names"><img style="margin: 15px; width: 40%;" alt="Num2NumNames" src="https://camo.githubusercontent.com/2f7d2df13144bf06782bf043e8128d2fec3c9df63ae7f22177c25c73971bf173/68747470733a2f2f6769746875622d726561646d652d73746174732e76657263656c2e6170702f6170692f70696e2f3f757365726e616d653d596173682d56617273686e65792d437265617469766974696573267265706f3d4e756d626572732d746f2d4e756d6265722d4e616d6573"></a>
+                    <p>This is a GUI. You need to enter an integer and it will give out the number name.</p><br>
+                    <br>
+                    <a class="select" href="https://github.com/Yash-Varshney-Creativities/Portfolio-Webpage"><img style="margin: 15px; width: 40%" src="https://camo.githubusercontent.com/00e6dff5254a1a53e8e23ed0a60124cb009b1d626feafce6f0bdd8d36ab7c415/68747470733a2f2f6769746875622d726561646d652d73746174732e76657263656c2e6170702f6170692f70696e2f3f757365726e616d653d596173682d56617273686e65792d437265617469766974696573267265706f3d506f7274666f6c696f2d57656250616765"></a>
+                    <p>This is My Porfolio website. This is the repo of the website on which you are on.</p><br><br>
+                    <a class="select" href="https://github.com/Yash-Varshney-Creativities/Motion-Detection/"><img style="margin: 15px; width: 40%" alt="NTNN" src="https://camo.githubusercontent.com/cffd08aab3e1855bce6d0ae701faa8d06adb24d4b388e4fa9b27f67dde3b6cdb/68747470733a2f2f6769746875622d726561646d652d73746174732e76657263656c2e6170702f6170692f70696e2f3f757365726e616d653d596173682d56617273686e65792d437265617469766974696573267265706f3d4d6f74696f6e2d446574656374696f6e">
+                    </a>
+                    <p>This is a Motion Detector. It Detects the Motion and draws a rectangle around the move.</p><br>
+                    <br><br><br><br><br><br>
+                </div>
+                <div id="onlinegames" class="tabcontent">
+                    <h2 class="shadow-on" style="padding: 2% 0% 15% 0%; text-align: left;">Follow</h2>
+                    <div class="select">
+                        <a href="https://github.com/Yash-Varshney-Creativities/"><img style="filter: invert(1); width: 50px;" draggable="false" id="git" alt="Git Logo" src="https://image.flaticon.com/icons/png/512/25/25231.png"></a>
+                        <a href="https://stackoverflow.com/users/14743453/yash-varshney"><img style="width: 50px;" draggable="false" alt="Stack OverFlow Logo" src="https://image.flaticon.com/icons/png/512/2111/2111628.png"></a>
+                        <a href="https://www.reddit.com/user/Yash_Varshney"><img draggable="false" style="width: 50px;" alt="Reddit Logo" src="https://external-preview.redd.it/iDdntscPf-nfWKqzHRGFmhVxZm4hZgaKe5oyFws-yzA.png?auto=webp&s=38648ef0dc2c3fce76d5e1d8639234d8da0152b2"></a>
+                        <a href="https://www.linkedin.com/in/yash-varshney-71a0111b6/"><img draggable="false" style="width: 50px;" alt="LinkedIn Logo" src="https://image.flaticon.com/icons/png/512/174/174857.png"></a>
+                    </div>
+                </div>
+                <div id="chat" class="tabcontent">
+                    <h2 class="shadow-on" style="padding: 2% 0%; text-align: left;">Chat</h2>
+                    <br><br><br>
+                    <div class="main">
+                        <form autocomplete="off" action="answer" class="form">
+                            <div class="input-group">
+                                <input name="query" action="/answer" class="chat_input" type="text" required>
+                                <span class="bar"></span>
+                                <label>Message</label>
+                                <br>
+                                <button id="sendButton" type="submit">Send</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div id="github" style="text-align: left;" class="tabcontent">
+                    <div>
+                        <h2 style="padding: 2% 0%;" class="shadow-on">Github</h2>
+                        <p style="font-size: 130%;">Hello, My Github Page link is <a class="mail" href="https://github.com/Yash-Varshney-Creativities/">https://github.com/Yash-Varshney-Creativities</a></p>
+                        <br>
+                        <p>I have many repositories. I have uploaded my best projects</p>
+                        <p>View My <b>Github Stats</b></p>
+                        <br>
+                        <img style="width: 40%;" id="stats" src="https://github-readme-stats.vercel.app/api?username=yash-varshney-creativities&show_icons=true&theme=dark" alt="Github Stats"><br>
+                        <br>
+                        <p>My <b>top languages</b> on Github are as follow</p><br>
+                        <img style="width: 40%;" id="langs" src="https://github-readme-stats.vercel.app/api/top-langs/?username=yash-varshney-creativities&hide=ruby&theme=dark" alt="Top Langs">
+                        <br><br>
+                        <img style="width: 20%;" id="views" src="https://komarev.com/ghpvc/?username=Yash-Varshney-Creativities&label=Profile%20views" alt="YashVarshney" /><br><br>
+                    </div>
+                </div>
+                <div id="connect" class="tabcontent">
+                    <h2 class="shadow-on" style="padding: 2% 0%; text-align: left;">Contact</h2>
+                    <div id="form-main">
+                        <div id="form-div">
+                            <form class="form" action="\sent" id="form1">
+                                <p class="name">
+                                    <input required name="name" type="text" class="validate[required,custom[onlyLetter],length[0,100]] feedback-input" placeholder="Name" id="name" />
+                                </p>
+                                <p class="email">
+                                    <input required name="email" type="text" class="validate[required,custom[email]] feedback-input" id="email" placeholder="Email" />
+                                </p>
+                                <p class="text">
+                                    <textarea required name="text" class="validate[required,length[6,300]] feedback-input" id="comment" placeholder="Comment"></textarea>
+                                </p>
+                                <div class="submit">
+                                    <input type="submit" value="SEND" id="button-blue" />
+                                    <div class="ease"></div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <script src="{% static 'navbar.js' %}"></script>
+            <script src="{% static 'typewriter.js' %}"></script>
+            <script src="{% static 'changer.js' %}"></script>
+            <script src="{% static 'loader.js' %}"></script>
+</body>
+
+</html>

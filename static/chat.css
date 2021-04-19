@@ -1,0 +1,210 @@
+.main {
+    width: 400px;
+    margin: 0px auto 0;
+    display: block;
+    border-radius: 5px 5px 5px 5px;
+    -webkit-box-shadow: 0px 5px 50px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 0px 5px 50px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 5px 50px rgba(0, 0, 0, 0.5);
+}
+
+.header {
+    background: #333;
+    padding: 10px 0;
+    border-radius: 5px 5px 0 0;
+}
+
+h4 {
+    color: #fff;
+    font-family: 'Roboto Slab', serif;
+    font-size: 24px;
+    line-height: 0.1em;
+    text-align: center;
+}
+
+.form {
+    background: #333;
+    padding: 40px;
+    border-radius: 0 0 5px 5px;
+    border: 1px solid #222;
+}
+
+
+/* form starting stylings ------------------------------- */
+
+.input-group {
+    position: relative;
+    margin-bottom: 45px;
+}
+
+.chat_input {
+    font-size: 18px;
+    padding: 8px;
+    display: block;
+    width: 300px;
+    border: none;
+    border-bottom: 2px solid #404040;
+    background: none;
+    color: #fff;
+}
+
+.chat_input:focus {
+    outline: none;
+}
+
+
+/* LABEL ======================================= */
+
+label {
+    color: #fff;
+    font-size: 16px;
+    font-weight: normal;
+    position: absolute;
+    pointer-events: none;
+    left: 5px;
+    top: 10px;
+    transition: 0.2s ease all;
+    -moz-transition: 0.2s ease all;
+    -webkit-transition: 0.2s ease all;
+}
+
+
+/* active state */
+
+.chat_input:focus~label,
+.chat_input:valid~label {
+    top: -20px;
+    font-size: 14px;
+}
+
+
+/* BOTTOM BARS ================================= */
+
+.bar {
+    position: relative;
+    display: block;
+    width: 300px;
+}
+
+#sendButton {
+    color: white;
+    background-color: #161515;
+    width: 30%;
+    height: 30px;
+    transition: width 0.5s, height 0.5s;
+}
+
+#sendButton:hover {
+    color: white;
+    background-color: #161515;
+    width: 40%;
+    height: 40px;
+    transition: width 1s, height 1s;
+}
+
+.bar:before,
+.bar:after {
+    content: '';
+    height: 2px;
+    width: 0;
+    bottom: 0px;
+    position: absolute;
+    background: #2196f3;
+    transition: 0.2s ease all;
+    -moz-transition: 0.2s ease all;
+    -webkit-transition: 0.2s ease all;
+}
+
+.bar:before {
+    left: 50%;
+}
+
+.bar:after {
+    right: 50%;
+}
+
+.chat_input:focus~.bar:before,
+.chat_input:focus~.bar:after {
+    width: 50%;
+}
+
+.chat_input:focus~.highlight {
+    -webkit-animation: inputHighlighter 0.3s ease;
+    -moz-animation: inputHighlighter 0.3s ease;
+    animation: inputHighlighter 0.3s ease;
+}
+
+.chat_input[type="text"] {
+    background-color: #101010;
+}
+
+@-webkit-keyframes inputHighlighter {
+    from {
+        background: #2196f3;
+    }
+    to {
+        width: 0;
+        background: transparent;
+    }
+}
+
+@-moz-keyframes inputHighlighter {
+    from {
+        background: #2196f3;
+    }
+    to {
+        width: 0;
+        background: transparent;
+    }
+}
+
+@keyframes inputHighlighter {
+    from {
+        background: #2196f3;
+    }
+    to {
+        width: 0;
+        background: transparent;
+    }
+}
+
+@media only screen and (max-width: 660px) {
+    .main {
+        width: 200px;
+        margin: 0px auto 0;
+        display: block;
+        border-radius: 5px 5px 5px 5px;
+        -webkit-box-shadow: 0px 5px 50px rgba(0, 0, 0, 0.5);
+        -moz-box-shadow: 0px 5px 50px rgba(0, 0, 0, 0.5);
+        box-shadow: 0px 5px 50px rgba(0, 0, 0, 0.5);
+    }
+    .chat_input {
+        font-size: 18px;
+        padding: 8px;
+        display: block;
+        width: 125px;
+        border: none;
+        border-bottom: 2px solid #404040;
+        background: none;
+        color: #fff;
+    }
+    .bar {
+        position: relative;
+        display: block;
+        width: 125px;
+    }
+    #sendButton {
+        color: white;
+        background-color: #161515;
+        width: 40%;
+        height: 40px;
+        transition: width 0.5s, height 0.5s;
+    }
+    #sendButton:hover {
+        color: white;
+        background-color: #161515;
+        width: 50%;
+        height: 50px;
+        transition: width 1s, height 1s;
+    }
+}
