@@ -1,0 +1,1063 @@
+@import url(https://fonts.googleapis.com/css?family=JetBrains+Mono);
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'JetBrains Mono', sans-serif
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.card {
+    display: inline;
+    box-sizing: border-box;
+    height: auto;
+    width: calc(100% / 4);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    margin: 20px;
+    border-radius: 10px;
+}
+
+hr {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+.card .header {
+    height: auto;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    background: coral;
+    font-size: 25px;
+    clip-path: circle(70% at 0% 0%);
+    transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.card .header h4 {
+    opacity: 0;
+    transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.card:hover .header {
+    clip-path: circle(100% at 50% 50%);
+    background: salmon;
+}
+
+.card:hover .header h4 {
+    opacity: 1;
+}
+
+.card .header h3,
+.card .header h4 {
+    margin: 0!important;
+    padding: 0;
+}
+
+.card .description {
+    padding: 20px;
+    font-family: 'Nunito', sans-serif;
+}
+
+
+/* Circle convert into card */
+
+.card.dot {
+    box-shadow: none;
+    clip-path: circle(19% at 24% 24%);
+    transition: all ease-in-out 0.5s;
+    background: royalblue;
+    color: white;
+}
+
+.card.dot:hover {
+    background: darkblue;
+    clip-path: circle(100%);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+
+.card.dot .header {
+    height: auto;
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    background: unset;
+    color: white;
+    font-size: 30px;
+}
+
+
+/* dual colors */
+
+.card.dual .header {
+    background: #F21B3F;
+}
+
+.card.dual .description {
+    clip-path: circle(20% at 100% 100%);
+    transition: all cubic-bezier(0.645, 0.045, 0.355, 1) 0.5s;
+    background: blue;
+    height: auto;
+    transition: all ease-in-out .7s;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    color: white;
+}
+
+.card.dual:hover .description {
+    clip-path: circle(100% at 50% 0%);
+    background: purple;
+}
+
+.card.dual:hover .header {
+    clip-path: circle(100% at 50% 50%);
+    background: purple;
+}
+
+@media(max-width: 768px) {
+    .cards-wrapper {
+        flex-direction: column;
+    }
+    .card {
+        width: 100%;
+    }
+}
+
+body {
+    font-family: 'JetBrains Mono', sans-serif;
+    color: #eee;
+    scroll-behavior: smooth
+}
+
+#hidde_para {
+    visibility: hidden
+}
+
+#pic {
+    width: 190px;
+    height: auto
+}
+
+body {
+    font-family: 'JetBrains Mono', sans-serif;
+    color: #eee
+}
+
+.btn {
+    background: #3498db;
+    background-image: -webkit-linear-gradient(top, #3498db, #2980b9);
+    background-image: -moz-linear-gradient(top, #3498db, #2980b9);
+    background-image: -ms-linear-gradient(top, #3498db, #2980b9);
+    background-image: -o-linear-gradient(top, #3498db, #2980b9);
+    background-image: linear-gradient(to bottom, #3498db, #2980b9);
+    -webkit-border-radius: 28;
+    -moz-border-radius: 28;
+    border-radius: 28px;
+    font-family: Arial;
+    color: #fff;
+    font-size: 20px;
+    padding: 10px 20px 10px 20px;
+    text-decoration: none
+}
+
+.btn:hover {
+    background: #3cb0fd;
+    background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
+    background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
+    background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
+    background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
+    background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+    text-decoration: none
+}
+
+.split {
+    height: 100%;
+    width: 90%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    overflow-x: hidden;
+    padding-top: 20px
+}
+
+.split2 {
+    height: 100%;
+    width: 10%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    overflow-x: hidden;
+    padding-top: 20px
+}
+
+h1,
+p {
+    color: #007580
+}
+
+#left {
+    left: 0;
+    background-color: #111
+}
+
+.skill-row {
+    width: 50%;
+    margin: 100px auto 100px auto;
+    text-align: left
+}
+
+.skill-row2 {
+    width: 50%;
+    margin: 100px auto 100px auto;
+    text-align: left
+}
+
+.Web-img {
+    width: 25%;
+    float: right;
+    margin-left: 30px
+}
+
+.Auto-img {
+    width: 25%;
+    float: left;
+    margin-left: 30px
+}
+
+#right {
+    right: 0;
+    background-color: #1a1a1a
+}
+
+.shadow-on {
+    color: #007580;
+    text-shadow: .5px .5px .5px #007580
+}
+
+.my-img {
+    filter: invert(1);
+    transition: box-shadow 1s
+}
+
+.my-img:hover {
+    box-shadow: 2px 2px 8px #666
+}
+
+.unselectable,
+br,
+img,
+pre {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none
+}
+
+pre {
+    display: inline
+}
+
+#toggle-btn {
+    width: 125px;
+    height: 40px;
+    margin-top: 50px;
+    float: right;
+}
+
+.mail {
+    color: #1687a7
+}
+
+header a {
+    text-decoration: none
+}
+
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    text-align: center;
+    width: 100%;
+    height: 100%
+}
+
+.centered img {
+    width: 150px
+}
+
+@media only screen and (max-width:675px) {
+    .split {
+        height: 100%;
+        width: 100%;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        overflow-x: hidden;
+        padding-top: 20px
+    }
+    .split2 {
+        height: 100%;
+        width: 0%;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        overflow-x: hidden;
+        padding-top: 20px
+    }
+}
+
+@media only screen and (max-width:900px) {
+    #pic {
+        width: 158px;
+        height: auto
+    }
+}
+
+@media only screen and (max-width:800px) {
+    #pic {
+        width: 105px;
+        height: auto
+    }
+}
+
+@media only screen and (max-width:650px) {
+    #pic {
+        width: 75px;
+        height: auto
+    }
+}
+
+* {
+    margin: 0;
+    box-sizing: border-box
+}
+
+.typewriter_container {
+    padding-top: 20%;
+    justify-content: center;
+    align-items: center
+}
+
+.typewriter_container p {
+    font-size: 37.5px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-align: center;
+    overflow: hidden;
+    color: #fff;
+    text-shadow: 5px 5px #21252b
+}
+
+.typewriter_container p span.typed-text {
+    font-weight: 400;
+    color: #dd7732;
+    font-size: 20px;
+    text-shadow: none
+}
+
+.typewriter_container p span.cursor {
+    display: inline-block;
+    background-color: #ccc;
+    margin-left: .1rem;
+    width: 2px;
+    animation: blink 1s infinite
+}
+
+.typewriter_container p span.cursor.typing {
+    animation: none
+}
+
+@keyframes blink {
+    0% {
+        background-color: #ccc
+    }
+    29% {
+        background-color: #ccc
+    }
+    49% {
+        background-color: #ccc
+    }
+    50% {
+        background-color: transparent
+    }
+    65% {
+        background-color: transparent
+    }
+    99% {
+        background-color: transparent
+    }
+    100% {
+        background-color: #ccc
+    }
+}
+
+.btn {
+    background: #3498db;
+    background-image: -webkit-linear-gradient(top, #3498db, #2980b9);
+    background-image: -moz-linear-gradient(top, #3498db, #2980b9);
+    background-image: -ms-linear-gradient(top, #3498db, #2980b9);
+    background-image: -o-linear-gradient(top, #3498db, #2980b9);
+    background-image: linear-gradient(to bottom, #3498db, #2980b9);
+    -webkit-border-radius: 28;
+    -moz-border-radius: 28;
+    border-radius: 28px;
+    font-family: Arial;
+    color: #fff;
+    font-size: 20px;
+    padding: 10px 20px 10px 20px;
+    text-decoration: none
+}
+
+.btn:hover {
+    background: #3cb0fd;
+    background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
+    background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
+    background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
+    background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
+    background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+    text-decoration: none
+}
+
+.unselectable,
+a,
+br,
+img,
+pre {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none
+}
+
+textarea {
+    resize: none;
+    border: 4px solid #101010;
+    font-family: Arial;
+    font-size: 20px
+}
+
+input[type=text],
+textarea {
+    background-color: #d1d1d1
+}
+
+br {
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none
+}
+
+.btn {
+    background: #000;
+    background-image: -webkit-linear-gradient(top, #000, #000);
+    background-image: -moz-linear-gradient(top, #000, #000);
+    background-image: -ms-linear-gradient(top, #000, #000);
+    background-image: -o-linear-gradient(top, #000, #000);
+    background-image: linear-gradient(to bottom, #000, #000);
+    -webkit-border-radius: 10;
+    -moz-border-radius: 10;
+    border-radius: 10px;
+    -webkit-box-shadow: 0 1px 3px #666;
+    -moz-box-shadow: 0 1px 3px #666;
+    box-shadow: 0 1px 3px #666;
+    font-family: Arial;
+    color: #fff;
+    font-size: 25px;
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;
+    transition: 1s
+}
+
+.btn:hover {
+    background: #fff;
+    background-image: -webkit-linear-gradient(top, #fff, #fff);
+    background-image: -moz-linear-gradient(top, #fff, #fff);
+    background-image: -ms-linear-gradient(top, #fff, #fff);
+    background-image: -o-linear-gradient(top, #fff, #fff);
+    background-image: linear-gradient(to bottom, #fff, #fff);
+    color: #000;
+    text-decoration: none
+}
+
+.element {
+    margin: 10px
+}
+
+hr.proj {
+    width: 25%;
+    border-style: dotted none none;
+    border-width: 5px;
+    border-color: whitesmoke;
+}
+
+.tablink {
+    background-color: #00464d;
+    color: #fff;
+    float: left;
+    border: none;
+    outline: 0;
+    cursor: pointer;
+    padding: 14px 16px;
+    font-size: 16px;
+    width: 25%
+}
+
+@media only screen and (max-width:660px) {
+    .tablink {
+        background-color: #00464d;
+        color: #fff;
+        float: left;
+        border: none;
+        outline: 0;
+        cursor: pointer;
+        padding: 14px 16px;
+        font-size: 12px;
+        width: 25%
+    }
+}
+
+.tablink:hover {
+    background-color: #005e66
+}
+
+._image {
+    width: 10%
+}
+
+.tabcontent {
+    color: #fff;
+    display: none;
+    padding: 100px 20px;
+}
+
+#loader {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 1;
+    width: 120px;
+    height: 120px;
+    margin: -76px 0 0 -76px;
+    border: 16px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 16px solid #ddffbc;
+    border-right: 16px solid #91c788;
+    border-bottom: 16px solid #6fb663;
+    border-left: 16px solid #52734d;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite
+}
+
+@-webkit-keyframes spin {
+    0% {
+        -webkit-transform: rotate(0)
+    }
+    100% {
+        -webkit-transform: rotate(360deg)
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0)
+    }
+    100% {
+        transform: rotate(360deg)
+    }
+}
+
+.animate-bottom {
+    position: relative;
+    -webkit-animation-name: animatebottom;
+    -webkit-animation-duration: 1s;
+    animation-name: animatebottom;
+    animation-duration: 1s
+}
+
+@-webkit-keyframes animatebottom {
+    from {
+        bottom: -100px;
+        opacity: 0
+    }
+    to {
+        bottom: 0;
+        opacity: 1
+    }
+}
+
+@keyframes animatebottom {
+    from {
+        bottom: -100px;
+        opacity: 0
+    }
+    to {
+        bottom: 0;
+        opacity: 1
+    }
+}
+
+#myDiv {
+    display: none;
+    text-align: center
+}
+
+#feedback-page {
+    text-align: center
+}
+
+#text-feedback {
+    width: 80%;
+    padding-left: 10%;
+    padding-right: 10%;
+    background-color: #fff;
+    text-align: center
+}
+
+#form-main {
+    width: 100%;
+    float: left;
+    padding-top: 30px
+}
+
+#form-div {
+    background-color: #3c3c3c;
+    padding-left: 35px;
+    padding-right: 35px;
+    padding-top: 35px;
+    padding-bottom: 50px;
+    width: 450px;
+    float: left;
+    left: 50%;
+    position: absolute;
+    margin-left: -260px
+}
+
+textarea {
+    resize: none
+}
+
+.feedback-input {
+    opacity: .9;
+    color: #0493bd;
+    font-family: Montserrat, Helvetica, Arial, sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    border-radius: 0;
+    line-height: 22px;
+    background-color: #fbfbfb;
+    border: 3px solid #fbfbfb;
+    padding: 13px 13px 13px 54px;
+    margin-bottom: 10px;
+    width: 100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box
+}
+
+.feedback-input:focus {
+    background: #fff;
+    box-shadow: 0;
+    border: 3px solid #3498db;
+    color: #3498db;
+    outline: 0;
+    padding: 13px 13px 13px 54px
+}
+
+.focused {
+    color: #30aed6;
+    border: #30aed6 solid 3px
+}
+
+#name {
+    background-image: url(http://rexkirby.com/kirbyandson/images/name.svg);
+    background-size: 30px 30px;
+    background-position: 11px 8px;
+    background-repeat: no-repeat
+}
+
+#name:focus {
+    background-image: url(http://rexkirby.com/kirbyandson/images/name.svg);
+    background-size: 30px 30px;
+    background-position: 8px 5px;
+    background-position: 11px 8px;
+    background-repeat: no-repeat
+}
+
+#email {
+    background-image: url(http://rexkirby.com/kirbyandson/images/email.svg);
+    background-size: 30px 30px;
+    background-position: 11px 8px;
+    background-repeat: no-repeat
+}
+
+#email:focus {
+    background-image: url(http://rexkirby.com/kirbyandson/images/email.svg);
+    background-size: 30px 30px;
+    background-position: 11px 8px;
+    background-repeat: no-repeat
+}
+
+#comment {
+    background-image: url(http://rexkirby.com/kirbyandson/images/comment.svg);
+    background-size: 30px 30px;
+    background-position: 11px 8px;
+    background-repeat: no-repeat
+}
+
+textarea {
+    width: 100%;
+    height: 150px;
+    line-height: 150%
+}
+
+input:focus,
+input:hover,
+textarea:focus,
+textarea:hover {
+    background-color: #fff
+}
+
+#button-blue {
+    font-family: Montserrat, Helvetica, Arial, sans-serif;
+    float: left;
+    width: 100%;
+    border: #fbfbfb solid 4px;
+    cursor: pointer;
+    background-color: #3498db;
+    color: #fff;
+    font-size: 24px;
+    padding-top: 22px;
+    padding-bottom: 22px;
+    -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    transition: all .3s
+}
+
+#button-blue:hover {
+    background-color: rgba(0, 0, 0, 0);
+    color: #0493bd
+}
+
+.submit:hover {
+    color: #3498db
+}
+
+.ease {
+    border-top: 3px #3c3c3c solid;
+    width: 0;
+    height: 76px;
+    background-color: #fbfbfb;
+    -webkit-transition: .3s ease;
+    -moz-transition: .3s ease;
+    -o-transition: .3s ease;
+    -ms-transition: .3s ease;
+    transition: .3s ease
+}
+
+.submit:hover .ease {
+    width: 100%;
+    background-color: #fff
+}
+
+@media only screen and (max-width:580px) {
+    #form-div {
+        left: 3%;
+        margin-right: 3%;
+        width: 88%;
+        margin-left: 0;
+        padding-left: 3%;
+        padding-right: 3%
+    }
+}
+
+.main {
+    width: 400px;
+    margin: 0 auto 0;
+    display: block;
+    border-radius: 5px 5px 5px 5px;
+    -webkit-box-shadow: 0 5px 50px rgba(0, 0, 0, .5);
+    -moz-box-shadow: 0 5px 50px rgba(0, 0, 0, .5);
+    box-shadow: 0 5px 50px rgba(0, 0, 0, .5)
+}
+
+.header {
+    background: whitesmoke;
+    padding: 10px 0;
+    border-radius: 5px 5px 0 0
+}
+
+h4 {
+    color: #fff;
+    font-size: 14px;
+    text-align: center
+}
+
+.form {
+    background: #333;
+    padding: 40px;
+    border-radius: 0 0 5px 5px;
+    border: 1px solid #222
+}
+
+.input-group {
+    position: relative;
+    margin-bottom: 45px
+}
+
+.chat_input {
+    font-size: 18px;
+    padding: 8px;
+    display: block;
+    width: 300px;
+    border: none;
+    border-bottom: 2px solid #404040;
+    background: 0 0;
+    color: #fff
+}
+
+.chat_input:focus {
+    outline: 0
+}
+
+label {
+    color: #fff;
+    font-size: 16px;
+    font-weight: 400;
+    position: absolute;
+    pointer-events: none;
+    left: 5px;
+    top: 10px;
+    transition: .2s ease all;
+    -moz-transition: .2s ease all;
+    -webkit-transition: .2s ease all
+}
+
+.chat_input:focus~label,
+.chat_input:valid~label {
+    top: -20px;
+    font-size: 14px
+}
+
+.bar {
+    position: relative;
+    display: block;
+    width: 300px
+}
+
+#sendButton {
+    color: #fff;
+    background-color: #161515;
+    width: 30%;
+    height: 30px;
+    transition: width .5s, height .5s
+}
+
+#sendButton:hover {
+    color: #fff;
+    background-color: #161515;
+    width: 40%;
+    height: 40px;
+    transition: width 1s, height 1s
+}
+
+.bar:after,
+.bar:before {
+    content: '';
+    height: 2px;
+    width: 0;
+    bottom: 0;
+    position: absolute;
+    background: #2196f3;
+    transition: .2s ease all;
+    -moz-transition: .2s ease all;
+    -webkit-transition: .2s ease all
+}
+
+.bar:before {
+    left: 50%
+}
+
+.bar:after {
+    right: 50%
+}
+
+.chat_input:focus~.bar:after,
+.chat_input:focus~.bar:before {
+    width: 50%
+}
+
+.chat_input:focus~.highlight {
+    -webkit-animation: inputHighlighter .3s ease;
+    -moz-animation: inputHighlighter .3s ease;
+    animation: inputHighlighter .3s ease
+}
+
+.chat_input[type=text] {
+    background-color: #101010
+}
+
+@-webkit-keyframes inputHighlighter {
+    from {
+        background: #2196f3
+    }
+    to {
+        width: 0;
+        background: 0 0
+    }
+}
+
+@-moz-keyframes inputHighlighter {
+    from {
+        background: #2196f3
+    }
+    to {
+        width: 0;
+        background: 0 0
+    }
+}
+
+@keyframes inputHighlighter {
+    from {
+        background: #2196f3
+    }
+    to {
+        width: 0;
+        background: 0 0
+    }
+}
+
+#defaultOpen::after {
+    content: ".html";
+}
+
+#introTab::after {
+    content: ".md";
+}
+
+#skillsTab::after {
+    content: ".css";
+}
+
+#projectsTab::after {
+    content: ".js";
+}
+
+#followTab::after {
+    content: ".json";
+}
+
+#chatTab::after {
+    content: ".db";
+}
+
+#githubTab::after {
+    content: ".pdf";
+}
+
+#certificationsTab::after {
+    content: ".csv";
+}
+
+#contactTab::after {
+    content: ".py";
+}
+
+@media only screen and (max-width:660px) {
+    .main {
+        width: 200px;
+        margin: 0 auto 0;
+        display: block;
+        border-radius: 5px 5px 5px 5px;
+        -webkit-box-shadow: 0 5px 50px rgba(0, 0, 0, .5);
+        -moz-box-shadow: 0 5px 50px rgba(0, 0, 0, .5);
+        box-shadow: 0 5px 50px rgba(0, 0, 0, .5)
+    }
+    .chat_input {
+        font-size: 18px;
+        padding: 8px;
+        display: block;
+        width: 125px;
+        border: none;
+        border-bottom: 2px solid #404040;
+        background: 0 0;
+        color: #fff
+    }
+    .bar {
+        position: relative;
+        display: block;
+        width: 125px
+    }
+    #sendButton {
+        color: #fff;
+        background-color: #161515;
+        width: 40%;
+        height: 40px;
+        transition: width .5s, height .5s
+    }
+    #sendButton:hover {
+        color: #fff;
+        background-color: #161515;
+        width: 50%;
+        height: 50px;
+        transition: width 1s, height 1s
+    }
+    #defaultOpen::after {
+        content: "";
+    }
+    #introTab::after {
+        content: "";
+    }
+    #skillsTab::after {
+        content: "";
+    }
+    #projectsTab::after {
+        content: "";
+    }
+    #followTab::after {
+        content: "";
+    }
+    #chatTab::after {
+        content: "";
+    }
+    #githubTab::after {
+        content: "";
+    }
+    #certificationsTab::after {
+        content: "";
+    }
+    #contactTab::after {
+        content: "";
+    }
+}
+
+@media only screen and (max-width:700px) {
+    #logo-img {
+        visibility: hidden;
+        display: none;
+    }
+}
+.awards{
+    border-collapse: collapse;
+    text-decoration: none;
+    width: 100%;
+}
+.awards td, th{
+    border: 2px solid #007580;
+    text-align: left;
+  padding: 3px;
+  text-decoration: none;
+}

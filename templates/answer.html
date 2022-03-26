@@ -1,0 +1,21 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="{% static 'Logo.png' %}">
+    <title>Chat</title>
+</head>
+
+<body bgcolor="black">
+    <div style="margin: 40px; background-color: #323232; -webkit-box-shadow: 0px 5px 8px #666666; -moz-box-shadow: 0px 1px 3px #666666; box-shadow: 0px 1px 3px #666666;">
+        <center>
+            <p style="font-size: 300%; background-color: #262626; color: white;">Chat</p>
+        </center><pre style="font-family: Arial !important ; font-size: 110%;" class="response"> <img src="{% static 'user.png' %}" width="60"> <textarea id="Input" readonly style="margin: 0px; height: 90px; width: 40%;">{{mes}}</textarea></pre>
+        <pre style="text-align: right; font-family: Arial; font-size: 110%;" class="response"><textarea id="Output" readonly style="margin: 0px; height: 90px; width: 40%;">{{res}}</textarea><img src="{% static 'bot.png' %}" width="70"></pre><br></div><br>
+    <center><a class="btn" href="https://yashvarshney.herokuapp.com/">Return</a></center>
+</body>
+
+</html>
